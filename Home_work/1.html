@@ -1,0 +1,44 @@
+<!-- 
+ Developer:Prakash pratap singh 
+ 1.Swapping of first and last element of the array  
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>Swap 1st and last number</title>
+ </head>
+ <body>
+ <script> 
+     var a=Array();
+     var n=prompt("Enter number of elements in the array","");
+     function swap(a,n){
+        let i=0;c=0;
+        c=a[0];
+        a[0]=a[n-1];
+        a[n-1]=c;
+     }
+     for(let i=0;i<n;i++){
+          a[i] = prompt("Enter the number","");
+     }
+     document.write("The entered array is:");
+     for(let i=0;i<n;i++){
+     document.write(a[i]," ");}
+     document.write("<br>");
+     swap(a,n);
+     document.write("Array after swapping:");
+     for(let i=0;i<n;i++){
+     document.write(a[i]," ");}
+ </script>
+ 
+ </body>
+ </html>
+ 
+ <!-- 
+  Test case 01
+  input:[12,35,9,56,24]
+  output:[24,35,9,56,12] 
+ 
+  Test case 02
+  input:[1,2,3]
+  output:[3,2,1]
+  -->

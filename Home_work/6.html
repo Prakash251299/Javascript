@@ -1,0 +1,48 @@
+<!-- 
+ Developer:Prakash pratap singh  
+ 6.Printing all even numbers of an array
+ -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Even numbers</title>
+</head>
+<body>
+    <script>
+         var a = Array();
+        var n = prompt("Enter number of elements in the array");
+        function even(a){
+            let total=1,i=0,j=0;
+            document.write("The even elements are: [");
+            for (i=0; i < a.length; i++) {
+                 if(a[i]%2==0) {
+                   if(j!=0){document.write(",");}     //j is just for adding comma
+                    document.write(a[i]," ");j++;}
+            }
+            document.write("]");
+        }
+
+        for (let i = 0; i < n; i++) {
+            a[i] = prompt("Enter the elements for the array", "");
+        }
+        document.write("The entered array:", " ");
+        document.write("[");
+        for (let i = 0; i < n - 1; i++) {
+            document.write(a[i], ",");
+        }
+        document.write(a[n - 1]);
+        document.write("]");
+        document.write("<br>");
+        even(a);
+    </script>
+</body>
+</html>
+<!-- 
+Test case 01:
+input:[2,7,5,64,14]
+output:[2,64,14] 
+
+Test case 02:
+input:[12,14,95,3]
+output:[12,14]
+-->

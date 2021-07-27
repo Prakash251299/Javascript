@@ -1,0 +1,53 @@
+<!-- 
+ Developer:Prakash pratap singh  
+ 2.Swapping the elements of an array from its required position 
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <title>Swap any two numbers by their position</title>
+ </head>
+ <body>
+ <script> 
+     var a=Array();
+     var n=prompt("Enter number of elements in the array");
+     function swap(a,l,m){
+        let c=0;
+        c=a[l-1];
+        a[l-1]=a[m-1];
+        a[m-1]=c;
+     }
+     for(let i=0;i<n;i++){
+          a[i] = prompt("Enter the number","");
+     }
+     j=prompt("Enter the position of the element you want to swap");
+     k=prompt("Enter position of the element you want to swap with the previous element");
+    document.write("The entered array:"," ");
+    document.write("[");
+    for(let i=0;i<n-1;i++){
+    document.write(a[i],",");}
+    document.write(a[n-1]);
+    document.write("]");
+    document.write(", pos1-",j,", pos2-",k);
+    document.write("<br>");
+     swap(a,j,k);
+     document.write("Array after swapping:"," ");
+     document.write("[");
+     for(let i=0;i<n-1;i++){
+     document.write(a[i],",");}
+     document.write(a[n-1]);
+     document.write("]");
+ </script>
+ 
+ </body>
+ </html>
+ 
+ <!-- 
+  Test case 01
+  input:[23,65,19,90],pos1=1,pos2=3
+  output:[19,65,23,90] 
+ 
+  Test case 02
+  input:[1,2,3,4,5],pos1=2,pos2=5
+  output:[1,5,3,4,2]
+  -->

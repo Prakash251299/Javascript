@@ -1,0 +1,50 @@
+<!-- 
+ Developer:Prakash pratap singh  
+ 3.Counting number of times a number is present in an array
+ -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>count</title>
+</head>
+
+<body>
+    <script>
+        var a = Array();
+        var n = prompt("Enter number of elements in the array");
+        function count(a, x) {
+            let i = 0, j = 0;
+            for (i = 0; i < a.length; i++) {
+                if (a[i] == x) {
+                    j++;
+                }
+            }
+            return j;
+        }
+        for (let i = 0; i < n; i++) {
+            a[i] = prompt("Enter the elements for the array", "");
+        }
+        x = prompt("Enter any number to check how many times it is present in the array");
+        document.write("The entered array:", " ");
+        document.write("[");
+        for (let i = 0; i < n - 1; i++) {
+            document.write(a[i], ",");
+        }
+        document.write(a[n - 1]);
+        document.write("]");
+        document.write("<br>");
+        j = count(a, x);
+        document.write(x, " appears ", j, " times in the array");
+
+    </script>
+</body>
+
+</html>
+<!-- 
+Test 01:
+input:[15,6,7,10,8,20,10,8,8]    
+x=16
+Test 02:
+input:[8,6,8,10,8,20,10,8,8]
+ -->

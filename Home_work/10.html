@@ -1,0 +1,48 @@
+<!-- 
+ Developer:Prakash pratap singh  
+ 10.Printing all negative numbers of an array
+ -->
+ <!DOCTYPE html>
+ <html lang="en">
+     <head>
+         <title>Negative numbers</title>
+ </head>
+ <body>
+     <script>
+          var a = Array();
+         var n = prompt("Enter number of elements in the array");
+         function negative(a){
+             let total=1,i=0,j=0;
+             document.write("The even elements are: [");
+             for (i=0; i < a.length; i++) {
+                  if(a[i]<0) {
+                    if(j!=0){document.write(",");}     //j is just for adding comma
+                     document.write(a[i]," ");j++;}
+             }
+             document.write("]");
+         }
+ 
+         for (let i = 0; i < n; i++) {
+             a[i] = prompt("Enter the elements for the array", "");
+         }
+         document.write("The entered array:", " ");
+         document.write("[");
+         for (let i = 0; i < n - 1; i++) {
+             document.write(a[i],",");
+         }
+         document.write(a[n - 1]);
+         document.write("]");
+         document.write("<br>");
+         negative(a);
+     </script>
+ </body>
+ </html>
+ <!-- 
+ Test case 01:
+ input:[12,-7,5,64,-14]
+ output:[-7,-14] 
+ 
+ Test case 02:
+ input:[12,14,-95,3]
+ output:[-95]
+ -->
